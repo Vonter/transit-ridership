@@ -21,8 +21,11 @@ do
   csv="${BASEDIR}/CSVs/$csv"
   echo $csv
   date=$(grep -Eo '[0-9\/]{5,}' $csv | head -n 1)
+  day=$(echo $date | cut -d "/" -f 1)
+  month=$(echo $date | cut -d "/" -f 2)
+  year=$(echo $date | cut -d "/" -f 3)
   passengers=$(grep -Eo '[0-9\.,]{5,}' $csv | head -n 15 | sed 's/,//g' | tr '\n' ',')
-  csv_line="$date,$passengers"
+  csv_line="$year-$month-$day,$passengers"
   echo $csv_line >> shakti.csv
 done
 
