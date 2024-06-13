@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IFS=$'\n';
-BASEDIR="raw/BMTC"
+BASEDIR="raw/Karnataka"
 
 mkdir -p ${BASEDIR}/PDFs
 mkdir -p ${BASEDIR}/CSVs
@@ -14,7 +14,7 @@ rm Shakti.zip
 mv Shakti\ Ridership/* "${BASEDIR}/PDFs"
 rmdir Shakti\ Ridership
 tabula -b ${BASEDIR}/PDFs -f CSV -o CSVs -p all
-mv ${BASEDIR}/PDFs/*.csv raw/BMTC/CSVs
+mv ${BASEDIR}/PDFs/*.csv raw/Karnataka/CSVs
 
 for csv in $(ls "${BASEDIR}/CSVs");
 do 
@@ -32,4 +32,4 @@ done
 cat shakti.csv | grep -v 'date' | sort -u > shakti
 sed -i '1idate,ksrtc_total,bmtc_total,nwkrtc_total,kkrtc_total,all_total,ksrtc_women,bmtc_women,nwkrtc_women,kkrtc_women,all_women,ksrtc_value,bmtc_value,nwkrtc_value,kkrtc_value,all_value,' shakti
 rm shakti.csv
-mv shakti "csv/BMTC/Shakti.csv"
+mv shakti "csv/Karnataka/Shakti.csv"

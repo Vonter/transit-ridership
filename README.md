@@ -3,11 +3,11 @@
 Datasets and visualizations of transit ridership across the world.
 
 Browse the dataset using the below links:
-- [BMTC](https://flatgithub.com/Vonter/transit-ridership?filename=csv/BMTC/Shakti.csv&stickyColumnName=date)
+- [Karnataka](https://flatgithub.com/Vonter/transit-ridership?filename=csv/Karnataka/Shakti.csv&stickyColumnName=date)
 
 ## Scripts
 
-- [parse.sh](parse.sh): Fetches the latest ridership PDFs for BMTC and generates CSVs
+- [parse.sh](parse.sh): Fetches the latest ridership PDFs for Karnataka and generates CSVs
 
 ## License
 
@@ -34,4 +34,4 @@ As long as you:
 
 ## Credits
 
-- [BMTC](https://mybmtc.karnataka.gov.in/english)
+- [Karnataka Transport Department](https://transport.karnataka.gov.in/english)
